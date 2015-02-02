@@ -15,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // Myo Setup
+        TLMHub.sharedHub()
+        TLMHub.sharedHub().lockingPolicy = TLMLockingPolicy.None
+        TLMHub.sharedHub().shouldNotifyInBackground = true
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"didReceivePoseChange:", name:TLMMyoDidReceivePoseChangedNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"didReceiveOrientationEvent:", name:TLMMyoDidReceiveOrientationEventNotification, object: nil)
+        
         return true
     }
 
