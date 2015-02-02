@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Myo Setup
         TLMHub.sharedHub()
@@ -47,6 +46,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    func didReceivePoseChange(notification: NSNotification) {
+        let pose = notification.userInfo![kTLMKeyPose] as TLMPose!
+        switch(pose.type.rawValue) {
+        case 0:
+            println("REST")
+            break
+        case 1:
+            println("FIST")
+            break
+        case 2:
+            println("WAVE IN")
+            break
+        case 3:
+            println("WAVE OUT")
+            break
+        case 4:
+            println("FINGERS SPREAD")
+            break
+        case 5:
+            println("DOUBLE TAP")
+            break
+        case 6:
+            println("UNKNOWN")
+            break
+        default:
+            println("INVALID MOVE")
+            break
+        }
+    }
+    
+    func didReceiveOrientationEvent(notification: NSNotification) {
+        let orientation = notification.userInfo![kTLMKeyOrientationEvent] as TLMOrientationEvent!
+    }
+    
+    func holdUnlockForMyo(myo: TLMMyo) {
+        myo.unlockWithType(TLMUnlockType.Hold)
+    }
+    
+    func endHoldUnlockForMyo(myo: TLMMyo, immediately: Bool) {
+        if(immediately) {
+            myo.lock()
+        } else {
+            myo.unlockWithType(TLMUnlockType.Hold)
+        }
+    }
+
 
 
 }

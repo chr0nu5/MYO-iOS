@@ -20,7 +20,11 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="Pzh-0k-xaO">
-                                        <barButtonItem key="leftBarButtonItem" title="Pair" id="umk-D5-KmY"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Pair" id="umk-D5-KmY">
+                                            <connections>
+                                                <action selector="settingsMyo:" destination="BYZ-38-t0r" id="qh3-0h-UF3"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
