@@ -13,6 +13,9 @@
 		216E6A081A800AA10035F4C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 216E6A071A800AA10035F4C9 /* Images.xcassets */; };
 		216E6A0B1A800AA10035F4C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 216E6A091A800AA10035F4C9 /* LaunchScreen.xib */; };
 		216E6A171A800AA10035F4C9 /* MYOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E6A161A800AA10035F4C9 /* MYOTests.swift */; };
+		216E6A211A800E570035F4C9 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216E6A201A800E570035F4C9 /* MyoKit.framework */; };
+		216E6A231A800E620035F4C9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216E6A221A800E620035F4C9 /* CoreBluetooth.framework */; };
+		216E6A251A800E6B0035F4C9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216E6A241A800E6B0035F4C9 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		216E6A101A800AA10035F4C9 /* MYOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MYOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		216E6A151A800AA10035F4C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		216E6A161A800AA10035F4C9 /* MYOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MYOTests.swift; sourceTree = "<group>"; };
+		216E6A201A800E570035F4C9 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = "../../../Downloads/Myo-iOS-SDK-0.4.0/MyoKit.framework"; sourceTree = "<group>"; };
+		216E6A221A800E620035F4C9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		216E6A241A800E6B0035F4C9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216E6A251A800E6B0035F4C9 /* SystemConfiguration.framework in Frameworks */,
+				216E6A231A800E620035F4C9 /* CoreBluetooth.framework in Frameworks */,
+				216E6A211A800E570035F4C9 /* MyoKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +68,9 @@
 		216E69F21A800AA10035F4C9 = {
 			isa = PBXGroup;
 			children = (
+				216E6A241A800E6B0035F4C9 /* SystemConfiguration.framework */,
+				216E6A221A800E620035F4C9 /* CoreBluetooth.framework */,
+				216E6A201A800E570035F4C9 /* MyoKit.framework */,
 				216E69FD1A800AA10035F4C9 /* MYO */,
 				216E6A131A800AA10035F4C9 /* MYOTests */,
 				216E69FC1A800AA10035F4C9 /* Products */,
@@ -338,6 +350,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Sherstein/Downloads/Myo-iOS-SDK-0.4.0",
+				);
 				INFOPLIST_FILE = MYO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +364,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Sherstein/Downloads/Myo-iOS-SDK-0.4.0",
+				);
 				INFOPLIST_FILE = MYO/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
