@@ -10,6 +10,9 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    var animator: UIDynamicAnimator!
+    var gravity: UIGravityBehavior!
+    var collision: UICollisionBehavior!
     
     override func viewDidLoad() {
         super.viewDidLoad()
