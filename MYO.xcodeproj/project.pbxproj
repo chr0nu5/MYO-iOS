@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		216E5AE01A82D39700D20347 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216E5ADF1A82D39700D20347 /* Foundation.framework */; };
 		216E6A011A800AA10035F4C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E6A001A800AA10035F4C9 /* AppDelegate.swift */; };
 		216E6A031A800AA10035F4C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216E6A021A800AA10035F4C9 /* ViewController.swift */; };
 		216E6A061A800AA10035F4C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 216E6A041A800AA10035F4C9 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		216E5ADF1A82D39700D20347 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		216E69FB1A800AA10035F4C9 /* MYO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		216E69FF1A800AA10035F4C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		216E6A001A800AA10035F4C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216E5AE01A82D39700D20347 /* Foundation.framework in Frameworks */,
 				21752BA91A80130300D7DE6B /* MyoKit.framework in Frameworks */,
 				216E6A251A800E6B0035F4C9 /* SystemConfiguration.framework in Frameworks */,
 				216E6A231A800E620035F4C9 /* CoreBluetooth.framework in Frameworks */,
@@ -127,6 +130,7 @@
 		21752BAA1A80159800D7DE6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				216E5ADF1A82D39700D20347 /* Foundation.framework */,
 				21752BA81A80130300D7DE6B /* MyoKit.framework */,
 				216E6A241A800E6B0035F4C9 /* SystemConfiguration.framework */,
 				216E6A221A800E620035F4C9 /* CoreBluetooth.framework */,

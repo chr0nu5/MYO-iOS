@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         println("Going to Settings")
         let settingsview = TLMSettingsViewController()
         self.navigationController?.pushViewController(settingsview, animated: true)
-        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,3 +32,4 @@ class ViewController: UIViewController {
 
 }
 
+      
